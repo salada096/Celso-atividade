@@ -1,0 +1,564 @@
+:root {
+    --blue-1: #001d3d; /* topo - azul quase preto */
+    --blue-2: #003566; /* azul escuro */
+    --blue-3: #005f8f; /* azul médio */
+    --blue-4: #6c9bad; /* azul acinzentado */
+    --blue-5: #a3c8db; /* azul claro acinzentado */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    position: relative;
+    margin-right: 150px;
+    margin-left: 150px;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at top, var(--blue-5) 0%, rgba(255,255,255,0) 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #000011 0%, #001d3d 40%, #005f8f 100%);
+    color: #ffffff;
+    width: 100vw;
+    height: 80vh;
+    border-radius: 50%;
+    position: absolute;
+    left: -10vw;
+    top: -50vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    filter: blur(70px); 
+    z-index: -1;
+}
+
+
+.hero-overlay {
+    position: relative; 
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100vw;
+    margin-left: calc(-150px);  
+    margin-right: calc(-150px); 
+    padding: 15px 150px;   
+    border-radius: 0;    
+    position: relative;
+    z-index: 100;
+    background-color: rgba(0, 29, 61, 0.9);
+}
+
+.logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after, .nav-links a.active:after {
+    width: 100%;
+}
+
+
+.hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    color: #003566;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+}
+
+.cursos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 0;
+    position: relative;
+    z-index: 2;
+    margin-top: 5vh;
+}
+
+.cursos-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 340px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.cursos-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    padding: 25px 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.card-header.one {
+    background-color: var(--blue-3);
+}
+
+.card-header.plus {
+    background-color: var(--blue-2);
+}
+
+.card-header.master {
+    background-color: var(--blue-1);
+}
+
+.card-header h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.valor {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.valor .preco {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--blue-2);
+}
+
+.valor .mes {
+    font-size: 16px;
+    color: #666;
+}
+
+.beneficios {
+    list-style: none;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.beneficios li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+.beneficios li:last-child {
+    border-bottom: none;
+}
+
+.beneficios li i {
+    margin-right: 10px;
+}
+
+.beneficios li .fa-check {
+    color: #2ecc71;
+}
+
+.beneficios li .fa-times {
+    color: #e74c3c;
+}
+
+.beneficios li.not-included {
+    color: #999;
+}
+
+.card-footer {
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--blue-3);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--blue-2);
+}
+
+.button-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--blue-3);
+    padding: 9px 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--blue-3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.button-outline:hover {
+    background-color: rgba(0, 95, 143, 0.1);
+}
+
+.card-popular {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--blue-2);
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    border-bottom-left-radius: 10px;
+    font-weight: 600;
+}
+
+.beneficios-secao {
+    background-color: rgba(249, 249, 249, 0.8);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    padding: 80px 50px;
+    margin-top: 40px;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.secao-titulo {
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    color: var(--blue-2);
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.beneficios-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+
+.beneficios-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    text-align: center;
+}
+
+.beneficios-icon {
+    font-size: 40px;
+    color: var(--blue-3);
+    margin-bottom: 20px;
+}
+
+.beneficios-item h3 {
+    font-size: 22px;
+    color: var(--blue-2);
+    margin-bottom: 15px;
+}
+
+.beneficios-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: var(--blue-1);
+    color: #fff;
+    padding: 60px 0 20px;
+    margin-top: 60px;
+    margin-left: -150px;
+    margin-right: -150px;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 150px;
+}
+
+.footer-logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer-column a {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.floating-element {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.3;
+    filter: blur(40px);
+}
+
+.floating-1 {
+    width: 300px;
+    height: 300px;
+    background-color: var(--blue-3);
+    top: 70vh;
+    right: -100px;
+    animation: float 20s infinite alternate ease-in-out;
+}
+
+.floating-2 {
+    width: 200px;
+    height: 200px;
+    background-color: var(--blue-5);
+    top: 40vh;
+    left: -80px;
+    animation: float 15s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(30px) rotate(10deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    .footer-content {
+        padding: 0 100px;
+    }
+
+    .navbar {
+        margin-left: calc(-100px);
+        margin-right: calc(-100px);
+        padding: 15px 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .footer-content {
+        padding: 0 50px;
+    }
+    
+    .navbar {
+        margin-left: calc(-50px);
+        margin-right: calc(-50px);
+        padding: 15px 50px;
+    }
+    
+    .beneficios {
+        transform: none;
+        order: -1;
+        margin-bottom: 0;
+    }
+    
+    .beneficios:hover {
+        transform: translateY(-10px);
+    }
+    
+    .cursos-container,
+    .beneficios-container {
+        flex-wrap: wrap;
+    }
+    
+    .cursos-card,
+    .beneficios-item {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+    
+    .hero-content {
+        margin-top: 25vh;
+    }
+    
+    .h1 {
+        font-size: 36px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        margin-left: calc(-20px);
+        margin-right: calc(-20px);
+        padding: 15px 20px;
+    }
+    
+    .cursos-card,
+    .beneficios-item {
+        flex: 0 0 100%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        margin-top: 30px;
+        gap: 30px;
+    }
+}
+
+.cursos-card.beneficios {
+    transform: scale(1.05);
+    border: 2px solid var(--blue-2);
+}
+
+.cursos-card.beneficios:hover {
+    transform: translateY(-10px) scale(1.05);
+}
