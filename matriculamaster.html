@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajueiro Tech - Matrícula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="cursos.css">
+    <link rel="stylesheet" href="matriculamaster.css">
+    <script src="matriculamaster.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">Cajueiro Tech</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="cursos.html" class="active">Cursos</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero-section"></div>
+    
+    <div class="floating-element floating-2"></div>
+    
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1 class="h1">Matrícula</h1>
+            <p class="p">Complete o formulário abaixo para iniciar sua jornada na Cajueiro Tech!</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="matricula-container">
+            <div class="curso-selecionado">
+                <div class="curso-info">
+                    <h2>Você selecionou:</h2>
+                    <div id="curso-card" class="curso-card">
+                        <div class="curso-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="curso-detalhes">
+                            <h3 id="curso-nome">Startup Master</h3>
+                            <p class="curso-valor"><span id="curso-valor">R$ 997</span><span class="mes">/mês</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form id="matricula-form" method="post" action="processa_matricula.php">
+                    <input type="hidden" id="curso-id" name="curso-id" value="plus">
+                    
+                    <div class="form-section">
+                        <h3 class="section-title">Dados Pessoais</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo*</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                                <span class="error-message" id="erro-nome"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cpf">CPF*</label>
+                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="14">
+                                <span class="error-message" id="erro-cpf"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail*</label>
+                                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                                <span class="error-message" id="erro-email"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefone">Celular*</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required maxlength="15">
+                                <span class="error-message" id="erro-telefone"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="data-nascimento">Data de Nascimento*</label>
+                                <input type="date" id="data-nascimento" name="data-nascimento" required>
+                                <span class="error-message" id="erro-data-nascimento"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="escolaridade">Escolaridade*</label>
+                                <select id="escolaridade" name="escolaridade" required>
+                                    <option value="">Selecione</option>
+                                    <option value="medio">Ensino Médio</option>
+                                    <option value="superior">Ensino Superior</option>
+                                    <option value="pos">Pós-graduação</option>
+                                    <option value="mestrado">Mestrado</option>
+                                    <option value="doutorado">Doutorado</option>
+                                </select>
+                                <span class="error-message" id="erro-escolaridade"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3 class="section-title">Informações Profissionais</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="experiencia">Experiência Empreendedora*</label>
+                                <select id="experiencia" name="experiencia" required>
+                                    <option value="">Selecione</option>
+                                    <option value="nenhuma">Nenhuma experiência prévia</option>
+                                    <option value="iniciante">Iniciante (menos de 1 ano)</option>
+                                    <option value="intermediario">Intermediário (1-3 anos)</option>
+                                    <option value="avancado">Avançado (mais de 3 anos)</option>
+                                </select>
+                                <span class="error-message" id="erro-experiencia"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="area-interesse">Área de Interesse*</label>
+                                <select id="area-interesse" name="area-interesse" required>
+                                    <option value="">Selecione</option>
+                                    <option value="tecnologia">Tecnologia</option>
+                                    <option value="saude">Saúde</option>
+                                    <option value="educacao">Educação</option>
+                                    <option value="financas">Finanças</option>
+                                    <option value="varejo">Varejo</option>
+                                    <option value="servicos">Serviços</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                                <span class="error-message" id="erro-area-interesse"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="objetivo">Objetivo com o curso*</label>
+                                <textarea id="objetivo" name="objetivo" rows="3" placeholder="Descreva brevemente seu objetivo com o curso" required></textarea>
+                                <span class="error-message" id="erro-objetivo"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3 class="section-title">Método de Pagamento</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="metodo-pagamento">Forma de Pagamento*</label>
+                                <select id="metodo-pagamento" name="metodo-pagamento" required>
+                                    <option value="">Selecione</option>
+                                    <option value="cartao">Cartão de Crédito</option>
+                                    <option value="boleto">Boleto Bancário</option>
+                                    <option value="pix">PIX</option>
+                                </select>
+                                <span class="error-message" id="erro-metodo-pagamento"></span>
+                            </div>
+                        </div>
+                        
+                        <div id="campos-cartao" class="campos-pagamento" style="display: none;">
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="cartao-nome">Nome no Cartão*</label>
+                                    <input type="text" id="cartao-nome" name="cartao-nome" placeholder="Nome como está no cartão">
+                                    <span class="error-message" id="erro-cartao-nome"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cartao-numero">Número do Cartão*</label>
+                                    <input type="text" id="cartao-numero" name="cartao-numero" placeholder="0000 0000 0000 0000" maxlength="19">
+                                    <span class="error-message" id="erro-cartao-numero"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cartao-validade">Validade*</label>
+                                    <input type="text" id="cartao-validade" name="cartao-validade" placeholder="MM/AA" maxlength="5">
+                                    <span class="error-message" id="erro-cartao-validade"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cartao-cvv">CVV*</label>
+                                    <input type="text" id="cartao-cvv" name="cartao-cvv" placeholder="123" maxlength="3">
+                                    <span class="error-message" id="erro-cartao-cvv"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="campos-pix" class="campos-pagamento" style="display: none;">
+                            <div class="pix-info">
+                                <p>Após confirmar sua matrícula, você receberá um QR Code para pagamento via PIX.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="campos-boleto" class="campos-pagamento" style="display: none;">
+                            <div class="boleto-info">
+                                <p>Após confirmar sua matrícula, você receberá o boleto por e-mail para pagamento em até 3 dias úteis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section termos-section">
+                        <div class="form-group check-group">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">Li e concordo com os <a href="#" class="link-termos">Termos de Uso</a> e <a href="#" class="link-termos">Política de Privacidade</a>.*</label>
+                            <span class="error-message" id="erro-termos"></span>
+                        </div>
+                        
+                        <div class="form-group check-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Desejo receber novidades e conteúdos exclusivos por e-mail.</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="button-outline" onclick="window.history.back()">Voltar</button>
+                        <button type="submit" class="button" id="btn-matricular">Finalizar Matrícula</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Cajueiro Tech</div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Recursos</h3>
+                    <a href="#">Blog</a>
+                    <a href="#">E-books</a>
+                    <a href="#">Webinars</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Empresa</h3>
+                    <a href="#">Sobre nós</a>
+                    <a href="#">Depoimentos</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <a href="#">Termos de uso</a>
+                    <a href="#">Política de privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Cajueiro Tech. Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
