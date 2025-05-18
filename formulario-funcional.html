@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <title>Teste</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans JP";
+        }
+        body{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.116);
+            border-radius: 10px;
+            height: 35px;
+            padding: 0px 10px 0px 10px;
+        }
+        input:focus{
+            outline: none;
+        }
+        textarea{
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.116);
+            border-radius: 10px;
+            height: 100px;
+            padding: 10px 10px 10px 10px;
+            resize: none;
+        }
+        textarea:focus{
+            outline: none;
+        }
+        button{
+            border: none;
+            height: 45px;
+            border-radius: 10px;
+            background-color: rgb(0, 132, 255);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(0, 97, 187);
+        }
+    </style>
+</head>
+<body>
+  <!--
+    Copiar somente essa parte a baixo
+                                 ||
+                                 ||
+                                 \/
+  -->
+    <main>
+        <h1>Formulário Funcional</h1>
+        <form action="https://formsubmit.co/guilherme.oliver@ba.estudante.senai.br" method="POST">
+            <label for="Nome">Nome completo:</label>
+            <input type="text" name="Nome" autocomplete="off" required>
+            <label for="email">Email:</label>
+            <input type="email" name="Email" autocomplete="off" required>
+            <label for="message">Escreva uma mensagem:</label>
+            <textarea name="Mensagem"></textarea><br>
+            <button type="submit">Enviar</button>
+       </form>
+    </main>
+</body>
+</html>
