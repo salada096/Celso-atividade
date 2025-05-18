@@ -17,9 +17,15 @@ body {
     background-color: #ffffff;
     color: #333;
     position: relative;
-    margin-right: 150px;
-    margin-left: 150px;
     overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 body::before {
@@ -47,13 +53,12 @@ body::before {
     display: flex;
     justify-content: center;
     filter: blur(70px); 
-    z-index: -1;
+    z-index: 0;
 }
-
 
 .hero-overlay {
     position: relative; 
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -65,15 +70,24 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 15px 0;
     width: 100vw;
-    margin-left: calc(-150px);  
-    margin-right: calc(-150px); 
-    padding: 15px 150px;   
-    border-radius: 0;    
-    position: relative;
-    z-index: 100;
-    background-color: rgba(0, 29, 61, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999 !important;
+    background-color: rgba(0, 29, 61); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo {
@@ -116,21 +130,22 @@ body::before {
     width: 100%;
 }
 
-
 .hero-content {
     width: 100%;
     position: relative;
     z-index: 2;
-    margin-top: 15vh;
+    margin-top: 120px; 
     text-align: center;
+    padding: 0 20px;
 }
 
 .h1 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 32px;
-    color: #003566;
+    color: #001d3d;
     font-weight: 400;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .p {
@@ -139,24 +154,27 @@ body::before {
     color: #000000;
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: -50px;
 }
 
 main {
     position: relative;
     z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 0 20px;
 }
 
 .cursos-container {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;  
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 0;
-    position: relative;
-    z-index: 2;
-    margin-top: 5vh;
+    padding: 60px 20px;
 }
 
 .cursos-card {
@@ -165,9 +183,10 @@ main {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 340px;
-    position: relative;
+    min-width: 280px; 
+    max-width: 100%;   
+    flex: 1 1 300px;  
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1;
 }
 
 .cursos-card:hover {
@@ -373,9 +392,8 @@ footer {
     color: #fff;
     padding: 60px 0 20px;
     margin-top: 60px;
-    margin-left: -150px;
-    margin-right: -150px;
     position: relative;
+    width: 100%;
 }
 
 .footer-content {
@@ -384,7 +402,7 @@ footer {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 150px;
+    padding: 0 20px;
 }
 
 .footer-logo {
@@ -462,48 +480,29 @@ footer {
 }
 
 @media (max-width: 1200px) {
-    body {
-        margin-right: 100px;
-        margin-left: 100px;
+    main, .footer-content {
+        padding: 0 40px;
     }
-
-    .footer-content {
-        padding: 0 100px;
+    
+    .cursos-container {
+        padding: 40px 20px;
     }
-
-    .navbar {
-        margin-left: calc(-100px);
-        margin-right: calc(-100px);
-        padding: 15px 100px;
+    
+    .cursos-card {
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 992px) {
-    body {
-        margin-right: 50px;
-        margin-left: 50px;
+
+    .h1{
+        color: #001d3d;
+    }
+    
+    .p{
+        color: #000000;
     }
 
-    .footer-content {
-        padding: 0 50px;
-    }
-    
-    .navbar {
-        margin-left: calc(-50px);
-        margin-right: calc(-50px);
-        padding: 15px 50px;
-    }
-    
-    .beneficios {
-        transform: none;
-        order: -1;
-        margin-bottom: 0;
-    }
-    
-    .beneficios:hover {
-        transform: translateY(-10px);
-    }
-    
     .cursos-container,
     .beneficios-container {
         flex-wrap: wrap;
@@ -516,43 +515,67 @@ footer {
 }
 
 @media (max-width: 768px) {
-    body {
-        margin-right: 20px;
-        margin-left: 20px;
+
+    .h1{
+        color: #001d3d;
+    }
+    
+    .p{
+        color: #000000;
+        margin-bottom: 0%;
     }
 
-    .footer-content {
-        padding: 0 20px;
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+        z-index: 9999; 
+    }
+    
+    .nav-links {
+        justify-content: center;
     }
     
     .hero-content {
-        margin-top: 25vh;
+        margin-top: 140px; 
     }
     
-    .h1 {
-        font-size: 36px;
+    main {
+        margin-top: 140px;
     }
     
-    .navbar {
-        flex-direction: column;
+    .cursos-container {
+        padding: 30px 15px;
+        gap: 50px;
+    }
+    
+    .cursos-card {
+        flex: 1 1 100%;
+        max-width: 400px;  
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
         gap: 15px;
-        margin-left: calc(-20px);
-        margin-right: calc(-20px);
-        padding: 15px 20px;
     }
     
-    .cursos-card,
-    .beneficios-item {
-        flex: 0 0 100%;
-    }
-    
-    .footer-content {
+    .beneficios-container {
         flex-direction: column;
     }
     
     .footer-links {
-        margin-top: 30px;
+        flex-direction: column;
         gap: 30px;
+    }
+    
+    .cursos-container {
+        padding: 20px 10px;
+        gap: 15px;
     }
 }
 
