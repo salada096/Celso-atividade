@@ -51,8 +51,7 @@ width: 100%;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    margin-left: calc(-150px);  
-    margin-right: calc(-150px); 
+
     border-radius: 0;    
     position: relative;
     z-index: 100;
