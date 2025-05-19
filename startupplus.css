@@ -1,12 +1,4 @@
-@import
-
-url('https://fonts.googleapis.co m/css2? family=Bebas+Neue&display=swap') ;
-
- @import
-
-url('https://fonts.googleapis.co m/css2?
-
-family=Lexend+Deca:wght@100..900 &display=swap');
+@import url('https://fonts.googleapis.co m/css2? family=Bebas+Neue&display=swap') ;
 
 :root {
 
@@ -20,13 +12,6 @@ family=Lexend+Deca:wght@100..900 &display=swap');
 
 --blue-5: #00509d;
 
-}
-
- margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
 *{
 
  margin: 0px;
@@ -34,13 +19,12 @@ family=Lexend+Deca:wght@100..900 &display=swap');
     box-sizing: border-box;
 }
 
-body {
-
-font-family: 'Lexend Deca', sans-serif;
-    background-color: #ffffff;
-    color: #333;
-    position: relative;
-    overflow-x: hidden;
+body{
+   font-family: 'Lexend Deca', sans-serif;
+   background-color: #ffffff;
+   color: #333;
+   position: relative;
+   overflow-x: hidden;
 }
 
 .navbar {
