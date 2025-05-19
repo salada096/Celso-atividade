@@ -24,31 +24,22 @@ body {
     overflow-x: hidden;
 }
 
-/* Correção da navbar */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
-    width: 100vw;
+    padding: 15px 0;   
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999 !important;
-    background-color: rgba(0, 29, 61); 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    padding-left: 350px;
-    padding-right: 350px;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    z-index: 9000;
+    background-color: rgba(0, 29, 61);
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo {
@@ -56,11 +47,14 @@ body {
     font-size: 32px;
     color: #ffffff;
     font-weight: 400;
+    padding-left: 350px !important;
 }
 
 .nav-links {
     display: flex;
     gap: 30px;
+    margin-right: 350px;
+    
 }
 
 .nav-links a {
@@ -90,7 +84,6 @@ body {
 .nav-links a:hover:after, .nav-links a.active:after {
     width: 100%;
 }
-
 
 .hero-section {
     background: linear-gradient(135deg, #000011 0%, #001d3d 40%, #005f8f 100%);
@@ -150,28 +143,27 @@ body {
 .titinho {
     flex: 1;
     padding: 20px;
-    margin-top: 16rem; 
-    margin-left: 80px;
+    margin-top: 16rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sections-container {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: -7rem auto 0;
     padding: 60px 20px;
     position: relative;
     z-index: 0;
-    margin-top: -7rem;
 }
-
-
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* ajuste conforme a altura da sua navbar */
     scroll-padding-top: 80px; 
 }
+
 .section {
     border-radius: 10px;
     flex: 1;
@@ -179,7 +171,6 @@ html {
     margin-top: -2rem;
     margin-bottom: 2rem;
     margin-right: 40px;
-
 }
 
 .section:last-child {
@@ -190,12 +181,11 @@ html {
     color: #002566;
     font-size: 16px;
     margin-bottom: 20px;
-    font-weight: 500}
+    font-weight: 500;
+}
 
 .section a{
-
     font-size: 14px;
-
     text-decoration: none;
 }
 
@@ -228,9 +218,8 @@ html {
 .infobox {
     background-color: #ffffff;
     padding: 30px;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 5rem;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
 }
 
 .h2 {
@@ -249,13 +238,14 @@ html {
     display: flex;
     max-width: 1200px;
     margin: 0 auto 5rem auto;
-    padding: 0 10px;
+    padding: 0 20px;
     gap: 30px;
 }
 
 .title-video {
-    margin-top: -4rem;
-    margin-left: 70px;
+    max-width: 1200px;
+    margin: -4rem auto 0;
+    padding: 0 20px;
 }
 
 .titlle {
@@ -341,7 +331,6 @@ html {
     font-size: 24px;
     font-weight: 500;
     color: #002566;
-    margin-left: 50px;
     margin-bottom: 60px;
 }
 
@@ -457,10 +446,8 @@ html {
     text-align: center;
 }
 
-/* Correção do footer */
 
 footer {
-    background-color: #001d3d; /* Substituído var(--blue-1) */
     background-color: #001d3d;
     color: #fff;
     padding: 60px 0 20px;
@@ -475,7 +462,7 @@ footer {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 150px;
+    padding: 0 20px;
 }
 
 .footer-logo {
@@ -528,8 +515,7 @@ footer {
 .floating-1 {
     width: 300px;
     height: 300px;
-    background-color: #003566; /* Substituído var(--blue-3) */
-    background-color: #003566; 
+    background-color: #003566;
     top: 70vh;
     right: -100px;
     animation: float 20s infinite alternate ease-in-out;
@@ -538,7 +524,7 @@ footer {
 .floating-2 {
     width: 200px;
     height: 200px;
-    background-color: #00509d; /* Substituído var(--blue-5) */
+    background-color: #00509d;
     top: 40vh;
     left: -80px;
     animation: float 15s infinite alternate-reverse ease-in-out;
@@ -555,17 +541,15 @@ footer {
 
 /* Media queries ajustadas */
 
-
 @media (max-width: 1000px) {
     .navbar {
-        padding: 15px 50px;
-
+        padding: 15px 20px;
     }
+    
     .hero-section {
         background: linear-gradient(135deg, #000011 0%, #001d3d 40%, #005f8f 100%);
         color: #ffffff;
         width: 100%;
-
         height: 100vh;
         border-radius: 40%;
         position: absolute; 
@@ -578,29 +562,24 @@ footer {
     }
 
     .h1{
-
         margin-top: -7rem;
     }
-
-    .footer-content {
-        padding: 0 50px;
-    }
-
+    
     .beneficios {
         transform: none;
         order: -1;
         margin-bottom: 0;
     }
-
+    
     .beneficios:hover {
         transform: translateY(-10px);
     }
-
+    
     .cursos-container,
     .beneficios-container {
         flex-wrap: wrap;
     }
-
+    
     .cursos-card,
     .beneficios-item {
         flex: 0 0 calc(50% - 15px);
@@ -609,38 +588,35 @@ footer {
 
 @media (max-width: 768px) {
    /* Mantemos o círculo como está */
-  
    .hero-section {
     background: linear-gradient(135deg, #000011 0%, #001d3d 40%, #005f8f 100%);
     color: #ffffff;
     width: 140%;
     height: 80vw; /* Altura baseada na largura da viewport */
-    height: 80vw; 
     border-radius: 50%;
     position: absolute; 
     top: 0;
     left: -25%; /* Centraliza o círculo */
-    left: -25%; 
     overflow: hidden;
     margin-top: -2vw; /* Move para cima para mostrar apenas parte do círculo */
-    margin-top: -2vw;
     display: flex;
     justify-content: center;
-
-
 }
 
 .navbar {
     flex-direction: column;
     gap: 15px;
     padding: 15px 20px;
+    width: 100%;
+    left: 0;
+    transform: none;
 }
 
 .hero-content {
     margin-top: 30px;
     padding: 0 20px;
-    position: relative;}
-
+    position: relative;
+}
 
 .h1 {
     font-size: 28px;
@@ -653,7 +629,6 @@ footer {
     max-width: 100%;
     color: rgba(255, 255, 255, 0.7);
 }
-
 
 .sections-container {
     flex-direction: column;
@@ -669,21 +644,13 @@ footer {
     margin-top: 0;
     z-index: -3;
 }
-
+ 
 .titinho {
     margin-top: 30px;
-    margin-left: 20px;
     text-align: center;
 }
 
-.footer-content {
-    padding: 0 20px;
-    flex-direction: column;
-}
-
 .infobox {
-    margin-left: 20px;
-    margin-right: 20px;
     margin-bottom: 3rem;
 }
 
@@ -694,12 +661,12 @@ footer {
 .video-container {
     margin-bottom: 20px;
 }
-
+ 
 .cards-container {
     flex-direction: column;
     align-items: center;
 }
-
+ 
 .card, .avaliacao-card {
     width: 100%;
     max-width: 320px;
@@ -712,8 +679,9 @@ footer {
 
 @media (min-width: 1500px) {
     .navbar {
-        padding: 15px 10px;
+        padding: 15px 20px;
     }
+    
     .hero-section {
         background: linear-gradient(135deg, #000011 0%, #001d3d 40%, #005f8f 100%);
         color: #ffffff;
@@ -728,33 +696,30 @@ footer {
         filter: blur(23px); 
         z-index: 0;
     }
-
-    .footer-content {
-        padding: 0 10px;
-    }
-
+    
     .hero-content {
         margin-top: 20vh;
     }
-
+    
     .h1 {
         font-size: 28px;
     }
-
+    
     .section-title {
         font-size: 20px;
     }
-
+    
     .card, .avaliacao-card {
         width: 100%;
         max-width: 280px;
     }
-
 }
+
 @media (min-width: 1800px) {
     .navbar {
-        padding: 15px 10px;
+        padding: 15px 20px;
     }
+    
     .hero-section {
         background: linear-gradient(135deg, #000011 0%, #001d3d 40%, #005f8f 100%);
         color: #ffffff;
@@ -769,41 +734,28 @@ footer {
         filter: blur(23px); 
         z-index: 0;
     }
-
-    .title-video{
-
-        margin-left: 370px;
-    }
-
-    .footer-content {
-        padding: 0 10px;
-    }
-
+    
     .hero-content {
         margin-top: 20vh;
     }
-
+    
     .h1 {
         font-size: 28px;
     }
-
+    
     .section-title {
         font-size: 20px;
     }
-
+    
     .card, .avaliacao-card {
         width: 100%;
         max-width: 280px;
     }
-
 }
-
-
 
 .cursos-card.beneficios {
     transform: scale(1.05);
-    border: 2px solid #003566; /* Substituído var(--blue-2) */
-    border: 2px solid #003566; 
+    border: 2px solid #003566;
 }
 
 .cursos-card.beneficios:hover {
