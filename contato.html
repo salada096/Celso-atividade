@@ -31,7 +31,7 @@
         <h1>Entre em Contato</h1>
         <section class="contato-container">
             <div>
-                <form name="contatos" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="contato.html">
+                <form action="https://formsubmit.co/guilherme.oliver@ba.estudante.senai.br" method="POST">
                     <div class="input-container">
                         <label for="Nome">Nome completo:</label>
                         <input type="text" name="Nome" autocomplete="off" required>
@@ -44,8 +44,7 @@
                         <label for="message">Escreva uma mensagem:</label>
                         <textarea name="Mensagem" id="mensagem"></textarea><br>
                     </div>
-                    <input type="hidden" name="form-name" value="contato">
-                    <div data-netlify-recaptcha="true"></div>
+                    <input type="hidden" name="_next" value="https://cajueiro-tech.netlify.app/contato">
                     <div id="botao-container">
                         <button type="submit" id="enviar">Enviar</button>
                     </div>
