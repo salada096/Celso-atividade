@@ -320,7 +320,7 @@ font-weight: 400;
   margin: 2rem auto;
   padding: 1rem 2rem;
   font-size: 1.1rem;
-  background: #00b894;
+  background: var(--blue-2);
   color: white;
   border: none;
   border-radius: 5px;
