@@ -83,12 +83,11 @@
         document.getElementById("enviar").addEventListener("click", function(event){
             let email = document.getElementById("email").value;
             let mensagem = document.getElementById("mensagem").value;
-        
-            if (mensagem.length === 0) {
-                alert("É necessário enviar uma mensagem para entrar em contato.");
-                event.preventDefault();
-            } else if (!email.includes("@") || (!email.endsWith(".com") && !email.endsWith(".br"))) {
+            if(!email.includes("@") || (!email.endsWith(".com") && !email.endsWith(".br"))){
                 alert("Informe um email válido.");
+                event.preventDefault();
+            }else if (mensagem.length === 0){
+                alert("É necessário enviar uma mensagem para entrar em contato.");
                 event.preventDefault();
             } else {
                 alert("Mensagem enviada com sucesso! Aguarde até entrarmos em contato por email.");
