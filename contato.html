@@ -38,7 +38,7 @@
                     </div>
                     <div class="input-container">
                         <label for="email">Email:</label>
-                        <input type="email" name="Email" autocomplete="off" required>
+                        <input type="email" name="Email" id="email" autocomplete="off">
                     </div>
                     <div class="input-container">
                         <label for="message">Escreva uma mensagem:</label>
@@ -81,9 +81,13 @@
     </footer>
     <script>
         document.getElementById("enviar").addEventListener("click", function(){
+            let email = document.getElementById("email").value;
             let mensagem = document.getElementById("mensagem").value;
             if(mensagem.length === 0){
                 alert("É necessário enviar uma mensagem para entrar em contato.");
+                event.preventDefault();
+            }else if(!email.includes("@") || (!email.endsWith(".com") || !email.endsWith(".br"){
+                alert("Informe um email válido.");
                 event.preventDefault();
             }else{
                 alert("Mensagem enviada com sucesso! Aguarde até entrarmos em contato por email.")
