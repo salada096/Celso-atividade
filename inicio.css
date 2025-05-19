@@ -294,6 +294,7 @@ margin: 0 auto 30px;
 }
 footer {
 background-color: var(--blue-1);
+  width:100%;
 color: #fff;
 padding: 60px 5% 20px;
 }
