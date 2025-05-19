@@ -334,10 +334,6 @@
     color: white;
     }
     
-    
-    
-    
-    
     .texto{
         text-align: justify;
         width: 100%;
@@ -346,6 +342,8 @@
     background-color: var(--blue-1);
     color: #fff;
     padding: 60px 5% 20px;
+    padding-left: 350px;
+    padding-right: 350px;
     }
     
     .footer-content {
@@ -408,7 +406,14 @@
     .menu-toggle {
     display: flex;
     }
-    
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    #mobile-menu{
+        display: none;
+       
+    }
     .nav-links {
     position: absolute;
     top: 100%;
