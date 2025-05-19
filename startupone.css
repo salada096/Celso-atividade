@@ -1,5 +1,4 @@
 
-/* CSS corrigido para o layout */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
@@ -157,7 +156,7 @@ body {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* ajuste conforme a altura da sua navbar */
+    scroll-padding-top: 80px; 
 }
 .section {
     border-radius: 10px;
@@ -444,9 +443,9 @@ html {
     text-align: center;
 }
 
-/* Correção do footer */
+
 footer {
-    background-color: #001d3d; /* Substituído var(--blue-1) */
+    background-color: #001d3d;
     color: #fff;
     padding: 60px 0 20px;
     margin-top: 60px;
@@ -513,7 +512,7 @@ footer {
 .floating-1 {
     width: 300px;
     height: 300px;
-    background-color: #003566; /* Substituído var(--blue-3) */
+    background-color: #003566; 
     top: 70vh;
     right: -100px;
     animation: float 20s infinite alternate ease-in-out;
@@ -592,18 +591,18 @@ footer {
 }
 
 @media (max-width: 768px) {
-   /* Mantemos o círculo como está */
+  
    .hero-section {
     background: linear-gradient(135deg, #000011 0%, #001d3d 40%, #005f8f 100%);
     color: #ffffff;
     width: 140%;
-    height: 80vw; /* Altura baseada na largura da viewport */
+    height: 80vw; 
     border-radius: 50%;
     position: absolute; 
     top: 0;
-    left: -25%; /* Centraliza o círculo */
+    left: -25%; 
     overflow: hidden;
-    margin-top: -2vw; /* Move para cima para mostrar apenas parte do círculo */
+    margin-top: -2vw;
     display: flex;
     justify-content: center;
     
@@ -782,7 +781,7 @@ footer {
 
 .cursos-card.beneficios {
     transform: scale(1.05);
-    border: 2px solid #003566; /* Substituído var(--blue-2) */
+    border: 2px solid #003566; 
 }
 
 .cursos-card.beneficios:hover {
