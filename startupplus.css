@@ -16,23 +16,9 @@
 body{
     background-color: #ffffff;
     position: relative;
-    margin-right: 150px;
-    margin-left: 150px;
     line-height: 1.6;
     color: #333;
 }
-body::before{
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to top, #a3c8db, #f4fbff);
-    z-index: -1;
-    pointer-events: none;
-}
-
 .hero-overlay {
 position: relative; 
 z-index: 1;
