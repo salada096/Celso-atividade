@@ -30,25 +30,23 @@ width: 100%;
 }
 
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 0;
-width: 100vw;
-margin-left: calc(-150px);  
-margin-right: calc(-150px); 
-padding: 15px 150px;   
-border-radius: 0;    
-position: relative;
-z-index: 100;
-background-color: rgba(0, 29, 61, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 150px;   
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    background-color: rgba(0, 29, 61);
 }
 
 .logo {
-font-family: "Bebas Neue", sans-serif;
-font-size: 32px;
-color: #ffffff;
-font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 400;
 }
 
 .nav-links {
@@ -83,52 +81,40 @@ font-weight: 400;
 .nav-links a:hover:after, .nav-links a.active:after {
     width: 100%;
 }
-.hero-title{
-    font-size: 32px;
-    font-family: "Bebas Neue", sans serif;
-}
-@media (min-width: 1500px) {
-  .navbar {
-    padding: 15px 10px;
-  }
-  .hero-section {
+
+.hero-section {
     background: linear-gradient(135deg, #000011 0%, #001d3d 40%, #005f8f 100%);
     color: #ffffff;
     width: 100%;
     height: 100vh;
+    max-width: 4200px;
     border-radius: 50%;
     position: absolute; 
     overflow: hidden;
-    margin-top: -32rem;
+    margin-top: -20rem;
     display: flex;
     justify-content: center;
     filter: blur(23px); 
-    z-index: 0;
-  }
+    z-index: -1;
 }
 
-@media (min-width: 1800px) {
-  .navbar {
-    padding: 15px 10px;
-  }
-  .hero-section {
-    margin-top: -40rem;
-  }
-  .title-video {
-    margin-left: 370px;
-  }
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 1rem;
-  background: linear-gradient(135deg, #6c5ce7, #0984e3);
-  color: white;
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    margin-top: 30vh;
+    text-align: center;
 }
 
 .hero h1 {
