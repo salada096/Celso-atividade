@@ -55,17 +55,29 @@ font-family: 'Lexend Deca', sans-serif;
   z-index: 1000;
 }
 
+
 .logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 400;
+    padding-left: 350px !important;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-right: 350px;
+    
 }
 
 .nav-links a {
-  margin-left: 2rem;
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
 }
 
 .nav-links a:hover, .nav-links a.active {
