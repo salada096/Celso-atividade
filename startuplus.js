@@ -1,41 +1,38 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.getElementById("quizForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-const quizForm = document.getElementById('quizForm');
-  const quizResult = document.getElementById('quizResult');
-  const resultText = document.getElementById('resultText');
-
-  quizForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-let total = 0;
-    const answers = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7'];
-    
-    answers.forEach(question => {
-      const answer = document.querySelector(`input[name="${question}"]:checked`);
-      if (answer) {
-        total += parseInt(answer.value);
+  let total = 0;
+  for (let i = 1; i <= 7; i++) {
+    const radios = document.getElementsByName("q" + i);
+    let answered = false;
+    for (const radio of radios) {
+      if (radio.checked) {
+        total += parseInt(radio.value);
+        answered = true;
+        break;
       }
-    });
-
-    const average = total / 7;
-    let profile = '';
-    let description = '';
-
-    if (average <= 0.75) {
-      profile = 'Perfil Sonhador';
-      description = 'Você está começando sua jornada empreendedora! Recomendamos começar pelo módulo introdutório e mentoria básica para construir uma base sólida.';
-    } else if (average <= 1.5) {
-      profile = 'Perfil Construtor';
-      description = 'Você está pronto para o Startup Plus com foco em validação e desenvolvimento do seu produto!';
-    } else if (average <= 2.25) {
-      profile = 'Perfil Acelerador';
-      description = 'Seu negócio está pronto para crescer! Você precisa de ferramentas dos cursos para escalar.';
-    } else {
-      profile = 'Perfil Visionário';
-      description = 'Você já tem experiência e está pensando em rodadas de investimento e escala global!';
     }
+    if (!answered) {
+      alert("Responda todas as perguntas antes de ver o resultado.");
+      return;
+    }
+  }
 
-    resultText.innerHTML = `<strong>${profile}</strong><br><br>${description}`;
-    quizResult.style.display = 'block';
-    quizResult.scrollIntoView({ behavior: 'smooth' });
-  });
+  const resultText = document.getElementById("resultText");
+  const quizResult = document.getElementById("quizResult");
+
+  let perfil = "";
+
+  if (total <= 7) {
+    perfil = "Explorador Iniciante: você está começando sua jornada no empreendedorismo e busca aprender o essencial.";
+  } else if (total <= 14) {
+    perfil = "Validador Estratégico: você já tem alguma experiência e está pronto para testar e validar ideias.";
+  } else if (total <= 18) {
+    perfil = "Construtor de Produtos: você já está no caminho certo e quer avançar no desenvolvimento e escalar.";
+  } else {
+    perfil = "Líder Visionário: você domina ferramentas e estratégias, pronto para liderar com impacto!";
+  }
+
+  resultText.textContent = perfil;
+  quizResult.style.display = "block";
+});
