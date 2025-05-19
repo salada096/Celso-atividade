@@ -1,32 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+
 :root {
-    --blue-1: #001d3d; 
-    --blue-2: #003566; 
-    --blue-3: #005f8f; 
-    --blue-4: #6c9bad; 
-    --blue-5: #a3c8db; 
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lexend Deca', sans-serif;
+    --blue-1: #001d3d;
+    --blue-2: #003566;
+    --blue-3: #0059a0;
+    --blue-4: #0077cc;
+    --blue-5: #00509d;
 }
 
-body{
-    background-color: #ffffff;
-    position: relative;
-    line-height: 1.6;
-    color: #333;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
-.hero-overlay {
-position: relative; 
-z-index: 1;
-display: flex;
-flex-direction: column;
-align-items: center; 
-justify-content: center;
-width: 100%;
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -117,16 +112,42 @@ width: 100%;
     text-align: center;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 12px;
+    text-align: center; 
+    margin-top: -2rem;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  margin: 1rem auto;
-  max-width: 800px;
-  line-height: 1.6;
+.p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 550px;
+    margin-bottom: 32px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+.cont {
+    flex: 1;
+    padding: 20px;
+    margin-top: 16rem; 
+    margin-left: 80px;
+}
+
+.sections-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 0;
+    margin-top: -7rem;
 }
 
 .cta-button {
