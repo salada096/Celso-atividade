@@ -60,8 +60,8 @@ border-radius: 0;
 position: relative;
 z-index: 100;
 background-color: rgba(0, 29, 61);
-padding-left: 350px;
-padding-right: 350px;
+
+
 }
 
 .logo {
@@ -69,11 +69,13 @@ font-family: "Bebas Neue", sans-serif;
 font-size: 32px;
 color: #ffffff;
 font-weight: 400;
+    padding-left: 350px;
 }
 
 .nav-links {
     display: flex;
     gap: 30px;
+    padding-right: 350px;
 }
 
 .nav-links a {
