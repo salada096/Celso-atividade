@@ -51,7 +51,7 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 15px;
+padding: 15px 350px 15px 350px;
 width: 100vw;
 margin-left: calc(-150px);  
 margin-right: calc(-150px); 
