@@ -36,7 +36,9 @@ body::before{
 /*
 -------------------------- Header --------------------------
 */
-
+header{
+    position: fixed;
+}
 .hero-overlay {
 position: relative; 
 z-index: 1;
@@ -46,7 +48,6 @@ align-items: center;
 justify-content: center;
 width: 100%;
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;
