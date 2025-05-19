@@ -156,14 +156,14 @@ body {
   border: none;
   border-radius: 5px;
   background: #00b894;
-  color: #003566;
+  color: blue;
   cursor: pointer;
   transition: transform 0.3s;
   margin-top: 2rem;
 }
 
 .cta-button:hover {
-  color: #0077cc;
+  color: blue-5;
 }
 
 .modules {
