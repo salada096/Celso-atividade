@@ -36,6 +36,7 @@ body::before{
 /*
 -------------------------- Header --------------------------
 */
+
 .hero-overlay {
 position: relative; 
 z-index: 1;
@@ -47,17 +48,18 @@ width: 100%;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    margin-left: calc(-150px);  
-    margin-right: calc(-150px); 
-
-    border-radius: 0;    
-    position: relative;
-    z-index: 100;
-    background-color: rgba(0, 29, 61);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 0;
+width: 100vw;
+margin-left: calc(-150px);  
+margin-right: calc(-150px); 
+padding: 15px 150px;   
+border-radius: 0;    
+position: relative;
+z-index: 100;
+background-color: rgba(0, 29, 61, 0.9);
 }
 
 .logo {
@@ -65,13 +67,11 @@ font-family: "Bebas Neue", sans-serif;
 font-size: 32px;
 color: #ffffff;
 font-weight: 400;
-    padding-left: 350px;
 }
 
 .nav-links {
     display: flex;
     gap: 30px;
-    padding-right: 350px;
 }
 
 .nav-links a {
@@ -254,18 +254,18 @@ font-size: 14px;
         margin-right: 100px;
         margin-left: 100px;
     }
-
+    
     .navbar {
         margin-left: calc(-100px);
         margin-right: calc(-100px);
         padding: 15px 100px;
     }
-
+    
     footer {
         margin-left: -100px;
         margin-right: -100px;
     }
-
+    
     .footer-content {
         padding: 0 100px;
     }
@@ -277,31 +277,31 @@ font-size: 14px;
         margin-right: 50px;
         margin-left: 50px;
     }
-
+    
     .navbar {
         margin-left: calc(-50px);
         margin-right: calc(-50px);
         padding: 15px 50px;
     }
-
+    
     footer {
         margin-left: -50px;
         margin-right: -50px;
     }
-
+    
     .footer-content {
         padding: 0 50px;
         gap: 30px;
     }
-
+    
     .footer-links {
         gap: 40px;
     }
-
+    
     main h1 {
         font-size: 36px;
     }
-
+    
     .contato-container {
         padding: 2.5rem;
     }
@@ -313,7 +313,7 @@ font-size: 14px;
         margin-right: 30px;
         margin-left: 30px;
     }
-
+    
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -321,34 +321,34 @@ font-size: 14px;
         margin-right: calc(-30px);
         padding: 15px 30px;
     }
-
+    
     footer {
         margin-left: -30px;
         margin-right: -30px;
         padding: 40px 0 20px;
     }
-
+    
     .footer-content {
         padding: 0 30px;
         flex-direction: column;
     }
-
+    
     .footer-links {
         margin-top: 20px;
         gap: 30px;
         justify-content: space-between;
         width: 100%;
     }
-
+    
     main {
         padding: 3rem 0;
         gap: 2rem;
     }
-
+    
     main h1 {
         font-size: 32px;
     }
-
+    
     .contato-container {
         padding: 2rem;
     }
@@ -360,64 +360,64 @@ font-size: 14px;
         margin-right: 15px;
         margin-left: 15px;
     }
-
+    
     .navbar {
         margin-left: calc(-15px);
         margin-right: calc(-15px);
         padding: 15px 15px;
     }
-
+    
     .nav-links {
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    
     footer {
         margin-left: -15px;
         margin-right: -15px;
     }
-
+    
     .footer-content {
         padding: 0 15px;
     }
-
+    
     .footer-links {
         flex-direction: column;
         gap: 25px;
     }
-
+    
     main h1 {
         font-size: 28px;
     }
-
+    
     .contato-container {
         padding: 1.5rem;
         border-top-width: 4px;
     }
-
+    
     input, textarea {
         font-size: 15px;
     }
-
+    
     label {
         font-size: 15px;
     }
-
+    
     #enviar {
         width: 100%;
         padding: 12px 0;
     }
-
+    
     .footer-logo {
         font-size: 30px;
     }
-
+    
     .footer-column h3 {
         font-size: 16px;
         margin-bottom: 15px;
     }
-
+    
     .footer-column a {
         margin-bottom: 10px;
         font-size: 14px;
@@ -535,13 +535,13 @@ font-weight: 400;
         margin-right: 100px;
         margin-left: 100px;
     }
-
+    
     .navbar {
         margin-left: calc(-100px);
         margin-right: calc(-100px);
         padding: 15px 100px;
     }
-
+    
     .footer-content {
         padding: 0 100px;
     }
@@ -552,17 +552,17 @@ font-weight: 400;
         margin-right: 50px;
         margin-left: 50px;
     }
-
+    
     .navbar {
         margin-left: calc(-50px);
         margin-right: calc(-50px);
         padding: 15px 50px;
     }
-
+    
     .footer-content {
         padding: 0 50px;
     }
-
+    
     .contato-container {
         width: 100%;
     }
@@ -573,7 +573,7 @@ font-weight: 400;
         margin-right: 20px;
         margin-left: 20px;
     }
-
+    
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -581,37 +581,37 @@ font-weight: 400;
         margin-right: calc(-20px);
         padding: 15px 20px;
     }
-
+    
     .footer-content {
         padding: 0 20px;
         flex-direction: column;
     }
-
+    
     .footer-links {
         margin-top: 30px;
         gap: 30px;
     }
-
+    
     main {
         padding: 2rem 1rem 8rem 1rem;
     }
-
+    
     main h1 {
         font-size: 28px;
     }
-
+    
     .contato-container {
         padding: 1.5rem;
     }
-
+    
     input, textarea {
         font-size: 14px;
     }
-
+    
     label {
         font-size: 14px;
     }
-
+    
     #enviar {
         padding: 10px 25px;
     }
