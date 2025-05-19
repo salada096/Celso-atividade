@@ -13,8 +13,7 @@
 --blue-5: #00509d;
 
 *{
-
- margin: 0px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
@@ -26,34 +25,69 @@ body{
    position: relative;
    overflow-x: hidden;
 }
+.hero-overlay {
+position: relative; 
+z-index: 1;
+display: flex;
+flex-direction: column;
+align-items: center; 
+justify-content: center;
+width: 100%;
+}
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 5%;
-  background: #001F3F;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 0;
+width: 100vw;
+margin-left: calc(-150px);  
+margin-right: calc(-150px); 
+padding: 15px 150px;   
+border-radius: 0;    
+position: relative;
+z-index: 100;
+background-color: rgba(0, 29, 61, 0.9);
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
+font-family: "Bebas Neue", sans-serif;
+font-size: 32px;
+color: #ffffff;
+font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
 .nav-links a {
-  margin-left: 2rem;
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
 }
 
 .nav-links a:hover, .nav-links a.active {
-  color: #0984e3;
+    color: #ffffff;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after, .nav-links a.active:after {
+    width: 100%;
 }
 
 @media (min-width: 1500px) {
