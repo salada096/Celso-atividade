@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    
     let profile = '';
     if (totalScore <= 7) {
       profile = 'Explorador Iniciante - Você está dando os primeiros passos no mundo do empreendedorismo!';
