@@ -83,7 +83,9 @@ font-weight: 400;
 .nav-links a:hover:after, .nav-links a.active:after {
     width: 100%;
 }
-
+.hero-title{
+    font-family: "Bebas Neue", sans serif;
+}
 @media (min-width: 1500px) {
   .navbar {
     padding: 15px 10px;
