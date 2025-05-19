@@ -1,4 +1,4 @@
-import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
 
@@ -155,15 +155,15 @@ body {
   font-size: 1.1rem;
   border: none;
   border-radius: 5px;
-  background: #00b894;
-  color: blue;
+  background: var(--blue-2); 
+  color: white;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
   margin-top: 2rem;
 }
 
 .cta-button:hover {
-  color: blue-5;
+  background-color: var(--blue-5); 
 }
 
 .modules {
