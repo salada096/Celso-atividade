@@ -84,6 +84,7 @@ font-weight: 400;
     width: 100%;
 }
 .hero-title{
+    font-size: 32px;
     font-family: "Bebas Neue", sans serif;
 }
 @media (min-width: 1500px) {
