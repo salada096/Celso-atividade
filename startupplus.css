@@ -1,30 +1,38 @@
-@import url('https://fonts.googleapis.co m/css2? family=Bebas+Neue&display=swap') ;
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root {
-
- --blue-1: #001d3d;
-
- --blue-2: #003566;
-
- --blue-3: #0059a0;
-
---blue-4: #0077cc;
-
---blue-5: #00509d;
-
+    --blue-1: #001d3d; 
+    --blue-2: #003566; 
+    --blue-3: #005f8f; 
+    --blue-4: #6c9bad; 
+    --blue-5: #a3c8db; 
+}
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
 }
 
 body{
-   font-family: 'Lexend Deca', sans-serif;
-   background-color: #ffffff;
-   color: #333;
-   position: relative;
-   overflow-x: hidden;
+    background-color: #ffffff;
+    position: relative;
+    margin-right: 150px;
+    margin-left: 150px;
+    line-height: 1.6;
+    color: #333;
 }
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #a3c8db, #f4fbff);
+    z-index: -1;
+    pointer-events: none;
+}
+
 .hero-overlay {
 position: relative; 
 z-index: 1;
