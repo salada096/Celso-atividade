@@ -243,7 +243,7 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 150px;   
+    padding: 15px 50px;   
     width: 100%;
     position: fixed;
     top: 0;
@@ -257,11 +257,13 @@ body::before {
     font-size: 32px;
     color: #ffffff;
     font-weight: 400;
+    margin-left: 366px;
 }
 
 .nav-links {
     display: flex;
     gap: 30px;
+    margin-right: 350px;
 }
 
 .nav-links a {
@@ -557,6 +559,14 @@ footer {
 
     }
     
+    .logo {
+        margin-left: 30px;
+    }
+
+    .nav-links {
+        margin-right: 30px;
+    }
+
     .hero-section{
         left: -150px;
     }
@@ -596,6 +606,24 @@ footer {
     flex-direction: column;
     gap: 15px;
     padding: 15px 20px;
+}
+
+.container{
+    font-size: 10px;
+    margin-left: -10px;
+}
+
+.infobox {
+    font-size: 10px;
+    width: 300px;
+}
+
+.logo {
+    margin-left: 20px; 
+}
+
+.nav-links {
+    margin-right: 20px; 
 }
 
 .hero-content {
