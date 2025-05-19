@@ -35,6 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
     quizResult.scrollIntoView({ behavior: 'smooth' });
   });
 });
-document.querySelector("module")addEventListener("click", function(){
+document.querySelector("module").addEventListener("click", function(){
   window.location.href = "startupone.html";
 });
