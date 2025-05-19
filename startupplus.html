@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Startup Plus - Inovação Digital</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Cajueiro Tech</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="cursos.html" class="active">Cursos</a>
+        <a href="formulario-funcional.html">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h1>Startup Plus</h1>
+<p> class="hero-text">Conecte-se com mentes brilhantes, valide seu produto e construa o futuro.</p>
+  </section>
+
+  <section id="modulos" class="modules">
+    <h2>Módulos do Curso</h2>
+    <div class="progress-container">
+      <div class="module">
+        <h3>Módulo 1: Fundamentos da Jornada Empreendedora</h3>
+        <p class="module-description">Inclui os benefícios do Startup One como base introdutória para o universo das startups.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%"></div>
+        </div>
+        <span class="status">100% Completo</span>
+      </div>
+      <div class="module">
+        <h3>Módulo 2: Construindo Produtos que Conectam</h3>
+        <p class="module-description">Mentorias focadas em desenvolvimento, validação e melhoria de produtos.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%"></div>
+        </div>
+        <span class="status">75% Completo</span>
+      </div>
+      <div class="module locked">
+        <h3>Módulo 3: Expansão de Conhecimento <i class="lock-icon">🔒</i></h3>
+        <p class="module-description">Cursos complementares para aprofundar habilidades técnicas e estratégicas.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 0%"></div>
+        </div>
+        <span class="status">Bloqueado</span>
+      </div>
+      <div class="module locked">
+        <h3>Módulo 4: Ecossistema de Inovação <i class="lock-icon">🔒</i></h3>
+        <p class="module-description">Acesso à comunidade exclusiva para networking, parcerias e troca de experiências.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 0%"></div>
+        </div>
+        <span class="status">Bloqueado</span>
+      </div>
+      <div class="module locked">
+        <h3>Módulo 5: Visão de Especialista <i class="lock-icon">🔒</i></h3>
+        <p class="module-description">Sessões de feedback com profissionais experientes para ajustar o rumo da startup.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 0%"></div>
+        </div>
+        <span class="status">Bloqueado</span>
+      </div>
+      <div class="module locked">
+        <h3>Módulo 6: Rumo à Escala Inteligente <i class="lock-icon">🔒</i></h3>
+        <p class="module-description">Reflexões e direcionamentos estratégicos para preparar sua startup para o próximo nível de crescimento.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 0%"></div>
+        </div>
+        <span class="status">Bloqueado</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="quiz">
+    <h2>Qual tipo de empreendedor você é?</h2>
+    <form id="quizForm" class="quiz-form">
+      <div class="question">
+        <h3>1. Qual o seu nível atual de experiência com startups ou negócios próprios?</h3>
+        <label><input type="radio" name="q1" value="0"> Nenhuma, estou começando agora</label>
+        <label><input type="radio" name="q1" value="1"> Já tentei algo antes, mas não fui adiante</label>
+        <label><input type="radio" name="q1" value="2"> Tenho um negócio em fase inicial</label>
+        <label><input type="radio" name="q1" value="3"> Já tenho uma startup em operação</label>
+      </div>
+
+      <div class="question">
+        <h3>2. Em que estágio sua ideia ou projeto está hoje?</h3>
+        <label><input type="radio" name="q2" value="0"> Ainda estou procurando uma ideia</label>
+        <label><input type="radio" name="q2" value="1"> Tenho uma ideia e quero validá-la</label>
+        <label><input type="radio" name="q2" value="2"> Já validei e estou desenvolvendo o produto</label>
+        <label><input type="radio" name="q2" value="3"> Produto pronto e quero escalar</label>
+      </div>
+
+      <div class="question">
+        <h3>3. Qual sua principal motivação para empreender?</h3>
+        <label><input type="radio" name="q3" value="0"> Ter liberdade e independência financeira</label>
+        <label><input type="radio" name="q3" value="1"> Resolver um problema que vejo no mundo</label>
+        <label><input type="radio" name="q3" value="2"> Trabalhar com algo que amo</label>
+        <label><input type="radio" name="q3" value="3"> Gerar impacto social ou ambiental</label>
+      </div>
+
+      <div class="question">
+        <h3>4. Você já tem uma equipe ou está empreendendo sozinho?</h3>
+        <label><input type="radio" name="q4" value="0"> Estou sozinho por enquanto</label>
+        <label><input type="radio" name="q4" value="1"> Tenho sócios/parceiros, mas sem equipe ainda</label>
+        <label><input type="radio" name="q4" value="2"> Tenho equipe e papéis definidos</label>
+        <label><input type="radio" name="q4" value="3"> Já tenho uma equipe estruturada</label>
+      </div>
+
+      <div class="question">
+        <h3>5. Você já conhece ferramentas como Canvas, MVP, ou metodologias ágeis?</h3>
+        <label><input type="radio" name="q5" value="0"> Nunca ouvi falar</label>
+        <label><input type="radio" name="q5" value="1"> Já ouvi falar, mas não usei</label>
+        <label><input type="radio" name="q5" value="2"> Já usei algumas em projetos</label>
+        <label><input type="radio" name="q5" value="3"> Uso com frequência no meu negócio</label>
+      </div>
+
+      <div class="question">
+        <h3>6. Quanto tempo você pode dedicar ao seu projeto por semana?</h3>
+        <label><input type="radio" name="q6" value="0"> Menos de 5 horas</label>
+        <label><input type="radio" name="q6" value="1"> Entre 5 e 10 horas</label>
+        <label><input type="radio" name="q6" value="2"> Mais de 10 horas</label>
+        <label><input type="radio" name="q6" value="3"> Tempo integral</label>
+      </div>
+
+      <div class="question">
+        <h3>7. O que você espera de um curso como o Startup Plus?</h3>
+        <label><input type="radio" name="q7" value="0"> Aprender do zero como tirar ideias do papel</label>
+        <label><input type="radio" name="q7" value="1"> Validar e desenvolver meu produto</label>
+        <label><input type="radio" name="q7" value="2"> Obter mentorias e direcionamento estratégico</label>
+        <label><input type="radio" name="q7" value="3"> Networking, feedbacks e acesso a especialistas</label>
+      </div>
+
+      <button type="submit" class="quiz-button">Ver Resultado</button>
+    </form>
+    <div id="quizResult" class="quiz-result" style="display: none;">
+      <h3>Seu perfil empreendedor:</h3>
+      <p id="resultText"></p>
+    </div>
+  </section>
+
+<footer>
+    <div class="footer-content">
+      <div class="footer-logo">Cajueiro Tech</div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Recursos</h3>
+          <a href="#">Blog</a>
+          <a href="#">E-books</a>
+          <a href="#">Webinars</a>
+        </div>
+        <div class="footer-column">
+          <h3>Empresa</h3>
+          <a href="#">Sobre nós</a>
+          <a href="#">Depoimentos</a>
+          <a href="#">Contato</a>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <a href="#">Termos de uso</a>
+          <a href="#">Política de privacidade</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Cajueiro Tech. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
