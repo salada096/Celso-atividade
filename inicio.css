@@ -450,10 +450,7 @@ font-size: 36px;
 }
 
 @media (max-width: 768px) {
-body {
-margin-right: 20px;
-margin-left: 20px;
-}
+
 .container-cursos,
 .destaques-grid {
 grid-template-columns: 1fr;
